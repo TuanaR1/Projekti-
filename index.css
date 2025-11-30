@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+
+}
+
+.navbar {
+  width: 100%;
+  background: #000;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  font-size: 10px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: 30px;
+}
+
+.resp-btn {
+  display: none;
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #fff;
+}
+
+.nav-center .logo {
+  width: 90px;
+  height: auto;
+  margin-right: 70px;
+}
+
+.search-btn {
+  padding: 8px 16px;
+  background: #232323;
+  border: 2px solid #232323; 
+  color: #979797;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  background: #000000;
+  
+}
+
+/* responsive */
+@media (max-width: 768px) {
+
+  .navbar {
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+
+  .resp-btn {
+    display: block;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .nav-left {
+    gap: 10px;
+  }
+
+  .nav-center .logo {
+    width: 70px;
+    margin: 0;
+  }
+
+  .nav-right {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #000;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #333;
+  }
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  text-align: left;
+}
+.container .bottom-left .slogan {
+  background-color: none;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.container .bottom-left .shop-now {
+  padding: 10px 20px;
+  background-color: white;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container .bottom-left .shop-now:hover {
+  color: white;
+  padding: 10px 20px;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid #000000;
+}
+
+
+
+@media (max-width: 768px) {
+  .container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;   
+    width: 100%;      
+    object-fit: cover; 
+  }
+
+  .bottom-left {
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+    z-index: 2;
+  }
+
+  .container .bottom-left .slogan {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .container .bottom-left .shop-now {
+    padding: 10px 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .bottom-left {
+    bottom: 30px;
+    left: 20px;
+  }
+
+  .container .bottom-left .slogan {
+    font-size: 24px;
+  }
+
+  .container .bottom-left .shop-now {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+.welcome {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.welcome-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.welcome-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.photos {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.photo-box {
+  flex: 1;
+  min-width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.photo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .welcome-title {
+    font-size: 26px;
+  }
+
+  .welcome-text {
+    font-size: 14px;
+  }
+
+  .photo-box {
+    min-width: 100%;
+  }
+}
